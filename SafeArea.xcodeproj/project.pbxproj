@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D182891B62FEB0E97874D91 /* libPods-SafeArea.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFDCD022CB4A74C410509A4 /* libPods-SafeArea.a */; };
 		D986048820219D8000AC49E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D986048720219D8000AC49E3 /* AppDelegate.m */; };
 		D986048B20219D8000AC49E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D986048A20219D8000AC49E3 /* ViewController.m */; };
 		D986048E20219D8000AC49E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D986048C20219D8000AC49E3 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89159D1B66DB55D52AFD8269 /* Pods-SafeArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafeArea/Pods-SafeArea.debug.xcconfig"; sourceTree = "<group>"; };
+		9BFDCD022CB4A74C410509A4 /* libPods-SafeArea.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SafeArea.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D986048320219D8000AC49E3 /* SafeArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D986048620219D8000AC49E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D986048720219D8000AC49E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		D986049220219D8000AC49E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D986049420219D8000AC49E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D986049520219D8000AC49E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F11643B300D6BA8123E941EB /* Pods-SafeArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafeArea/Pods-SafeArea.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D182891B62FEB0E97874D91 /* libPods-SafeArea.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C159E66CE19A357D9053EB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89159D1B66DB55D52AFD8269 /* Pods-SafeArea.debug.xcconfig */,
+				F11643B300D6BA8123E941EB /* Pods-SafeArea.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE4EED7194CD7DA4E4AEEB6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BFDCD022CB4A74C410509A4 /* libPods-SafeArea.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D986047A20219D8000AC49E3 = {
 			isa = PBXGroup;
 			children = (
 				D986048520219D8000AC49E3 /* SafeArea */,
 				D986048420219D8000AC49E3 /* Products */,
+				3C159E66CE19A357D9053EB7 /* Pods */,
+				BE4EED7194CD7DA4E4AEEB6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D986049920219D8000AC49E3 /* Build configuration list for PBXNativeTarget "SafeArea" */;
 			buildPhases = (
+				DB76E4D270BB03BF9CE592AD /* [CP] Check Pods Manifest.lock */,
 				D986047F20219D8000AC49E3 /* Sources */,
 				D986048020219D8000AC49E3 /* Frameworks */,
 				D986048120219D8000AC49E3 /* Resources */,
+				031E031976FAB631B2C10499 /* [CP] Embed Pods Frameworks */,
+				A47AF37826ADF078D1615C1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		031E031976FAB631B2C10499 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafeArea/Pods-SafeArea-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A47AF37826ADF078D1615C1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SafeArea/Pods-SafeArea-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB76E4D270BB03BF9CE592AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D986047F20219D8000AC49E3 /* Sources */ = {
@@ -276,11 +351,13 @@
 		};
 		D986049A20219D8000AC49E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89159D1B66DB55D52AFD8269 /* Pods-SafeArea.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J5JWPJ294;
 				INFOPLIST_FILE = SafeArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.SafeArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +367,13 @@
 		};
 		D986049B20219D8000AC49E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F11643B300D6BA8123E941EB /* Pods-SafeArea.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J5JWPJ294;
 				INFOPLIST_FILE = SafeArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KuaiJianKang.SafeArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
